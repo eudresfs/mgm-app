@@ -1,0 +1,73 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#2c3e50">Estratégia de Testes - Plataforma de Afiliados</text>
+  
+  <!-- Test Pyramid -->
+  <path d="M450 100 L200 450 L700 450 Z" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+  
+  <!-- UI Tests Layer -->
+  <path d="M450 100 L325 275 L575 275 Z" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+  <text x="450" y="200" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">UI / E2E Tests</text>
+  <text x="450" y="225" font-family="Arial" font-size="14" text-anchor="middle" fill="#1976d2">10-15% coverage</text>
+  
+  <!-- Integration Tests Layer -->
+  <path d="M325 275 L250 375 L650 375 L575 275 Z" fill="#90caf9" stroke="#1976d2" stroke-width="2"/>
+  <text x="450" y="335" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">Integration Tests</text>
+  <text x="450" y="360" font-family="Arial" font-size="14" text-anchor="middle" fill="#1976d2">30-40% coverage</text>
+  
+  <!-- Unit Tests Layer -->
+  <path d="M250 375 L200 450 L700 450 L650 375 Z" fill="#64b5f6" stroke="#1976d2" stroke-width="2"/>
+  <text x="450" y="420" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">Unit Tests</text>
+  <text x="450" y="445" font-family="Arial" font-size="14" text-anchor="middle" fill="#1976d2">70-80% coverage</text>
+  
+  <!-- E2E Tests Details -->
+  <rect x="50" y="480" width="250" height="180" rx="8" ry="8" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
+  <text x="175" y="510" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#303f9f">UI / E2E Tests</text>
+  <text x="70" y="540" font-family="Arial" font-size="14" fill="#333">• Cypress para testes de frontend</text>
+  <text x="70" y="570" font-family="Arial" font-size="14" fill="#333">• Fluxos principais de usuário</text>
+  <text x="70" y="600" font-family="Arial" font-size="14" fill="#333">• Cenários críticos de negócio</text>
+  <text x="70" y="630" font-family="Arial" font-size="14" fill="#333">• Executados em CI/CD pipeline</text>
+  
+  <!-- Integration Tests Details -->
+  <rect x="320" y="480" width="250" height="180" rx="8" ry="8" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
+  <text x="445" y="510" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#303f9f">Integration Tests</text>
+  <text x="340" y="540" font-family="Arial" font-size="14" fill="#333">• Testes de API com Supertest</text>
+  <text x="340" y="570" font-family="Arial" font-size="14" fill="#333">• Mocks para serviços externos</text>
+  <text x="340" y="600" font-family="Arial" font-size="14" fill="#333">• Testes de banco de dados</text>
+  <text x="340" y="630" font-family="Arial" font-size="14" fill="#333">• Execução automatizada</text>
+  
+  <!-- Unit Tests Details -->
+  <rect x="590" y="480" width="250" height="180" rx="8" ry="8" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
+  <text x="715" y="510" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#303f9f">Unit Tests</text>
+  <text x="610" y="540" font-family="Arial" font-size="14" fill="#333">• Jest para frontend e backend</text>
+  <text x="610" y="570" font-family="Arial" font-size="14" fill="#333">• React Testing Library</text>
+  <text x="610" y="600" font-family="Arial" font-size="14" fill="#333">• Cobertura de código > 80%</text>
+  <text x="610" y="630" font-family="Arial" font-size="14" fill="#333">• Execução em cada commit</text>
+  
+  <!-- Other Test Types -->
+  <rect x="750" y="100" width="130" height="350" rx="8" ry="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="815" y="130" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#7b1fa2">Tipos Adicionais</text>
+  <line x1="765" y1="145" x2="865" y2="145" stroke="#9c27b0" stroke-width="1.5"/>
+  
+  <text x="765" y="175" font-family="Arial" font-size="14" fill="#333">• Performance</text>
+  <text x="765" y="205" font-family="Arial" font-size="14" fill="#333">• Segurança</text>
+  <text x="765" y="235" font-family="Arial" font-size="14" fill="#333">• Acessibilidade</text>
+  <text x="765" y="265" font-family="Arial" font-size="14" fill="#333">• Usabilidade</text>
+  <text x="765" y="295" font-family="Arial" font-size="14" fill="#333">• Carga</text>
+  <text x="765" y="325" font-family="Arial" font-size="14" fill="#333">• Contrato</text>
+  <text x="765" y="355" font-family="Arial" font-size="14" fill="#333">• Regressão</text>
+  <text x="765" y="385" font-family="Arial" font-size="14" fill="#333">• Smoke</text>
+  <text x="765" y="415" font-family="Arial" font-size="14" fill="#333">• Sanidade</text>
+  
+  <!-- Continuous Testing Box -->
+  <rect x="40" y="100" width="180" height="150" rx="8" ry="8" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
+  <text x="130" y="130" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#00695c">Continuous Testing</text>
+  <line x1="55" y1="145" x2="205" y2="145" stroke="#00796b" stroke-width="1.5"/>
+  
+  <text x="55" y="175" font-family="Arial" font-size="14" fill="#333">• GitHub Actions</text>
+  <text x="55" y="205" font-family="Arial" font-size="14" fill="#333">• Jenkins</text>
+  <text x="55" y="235" font-family="Arial" font-size="14" fill="#333">• Executados em PRs</text>
+</svg>

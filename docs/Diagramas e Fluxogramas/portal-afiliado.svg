@@ -1,0 +1,138 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Portal do Afiliado - Estrutura e Fluxos</text>
+  
+  <!-- Main Portal Container -->
+  <rect x="50" y="80" width="800" height="480" rx="10" ry="10" fill="#fff" stroke="#bdbdbd" stroke-width="2"/>
+  
+  <!-- Header Navigation -->
+  <rect x="50" y="80" width="800" height="50" rx="10" ry="10" fill="#3f51b5" stroke="#303f9f" stroke-width="2"/>
+  <text x="150" y="110" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Dashboard</text>
+  <text x="300" y="110" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Campanhas</text>
+  <text x="450" y="110" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Materiais</text>
+  <text x="600" y="110" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Relatórios</text>
+  <text x="750" y="110" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Pagamentos</text>
+  
+  <!-- Dashboard Section -->
+  <rect x="80" y="150" width="250" height="180" rx="5" ry="5" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
+  <text x="205" y="170" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#3f51b5">Dashboard</text>
+  
+  <!-- Dashboard Charts -->
+  <rect x="100" y="185" width="100" height="60" rx="5" ry="5" fill="#c5cae9" stroke="#3f51b5" stroke-width="1"/>
+  <text x="150" y="215" font-family="Arial" font-size="12" text-anchor="middle">Visão Geral</text>
+  <text x="150" y="230" font-family="Arial" font-size="10" text-anchor="middle">Métricas principais</text>
+  
+  <rect x="210" y="185" width="100" height="60" rx="5" ry="5" fill="#c5cae9" stroke="#3f51b5" stroke-width="1"/>
+  <text x="260" y="215" font-family="Arial" font-size="12" text-anchor="middle">Performance</text>
+  <text x="260" y="230" font-family="Arial" font-size="10" text-anchor="middle">Gráficos e tendências</text>
+  
+  <rect x="100" y="255" width="100" height="60" rx="5" ry="5" fill="#c5cae9" stroke="#3f51b5" stroke-width="1"/>
+  <text x="150" y="285" font-family="Arial" font-size="12" text-anchor="middle">Ganhos</text>
+  <text x="150" y="300" font-family="Arial" font-size="10" text-anchor="middle">Comissões acumuladas</text>
+  
+  <rect x="210" y="255" width="100" height="60" rx="5" ry="5" fill="#c5cae9" stroke="#3f51b5" stroke-width="1"/>
+  <text x="260" y="285" font-family="Arial" font-size="12" text-anchor="middle">Alertas</text>
+  <text x="260" y="300" font-family="Arial" font-size="10" text-anchor="middle">Notificações</text>
+  
+  <!-- Campanhas Section -->
+  <rect x="350" y="150" width="200" height="180" rx="5" ry="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="450" y="170" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#4caf50">Campanhas</text>
+  
+  <!-- Campaigns List -->
+  <rect x="370" y="185" width="160" height="30" rx="5" ry="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="450" y="205" font-family="Arial" font-size="12" text-anchor="middle">Explorar Campanhas</text>
+  
+  <rect x="370" y="225" width="160" height="30" rx="5" ry="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="450" y="245" font-family="Arial" font-size="12" text-anchor="middle">Minhas Campanhas</text>
+  
+  <rect x="370" y="265" width="160" height="30" rx="5" ry="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="450" y="285" font-family="Arial" font-size="12" text-anchor="middle">Solicitações Pendentes</text>
+  
+  <!-- Materiais Section -->
+  <rect x="570" y="150" width="250" height="180" rx="5" ry="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="695" y="170" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ff9800">Materiais Promocionais</text>
+  
+  <!-- Materials Grid -->
+  <rect x="590" y="185" width="100" height="60" rx="5" ry="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+  <text x="640" y="215" font-family="Arial" font-size="12" text-anchor="middle">Banners</text>
+  <text x="640" y="230" font-family="Arial" font-size="10" text-anchor="middle">Diversos tamanhos</text>
+  
+  <rect x="700" y="185" width="100" height="60" rx="5" ry="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+  <text x="750" y="215" font-family="Arial" font-size="12" text-anchor="middle">Links</text>
+  <text x="750" y="230" font-family="Arial" font-size="10" text-anchor="middle">Links personalizados</text>
+  
+  <rect x="590" y="255" width="100" height="60" rx="5" ry="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+  <text x="640" y="285" font-family="Arial" font-size="12" text-anchor="middle">Textos</text>
+  <text x="640" y="300" font-family="Arial" font-size="10" text-anchor="middle">Descrições prontas</text>
+  
+  <rect x="700" y="255" width="100" height="60" rx="5" ry="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+  <text x="750" y="285" font-family="Arial" font-size="12" text-anchor="middle">Códigos</text>
+  <text x="750" y="300" font-family="Arial" font-size="10" text-anchor="middle">Cupons de desconto</text>
+  
+  <!-- Relatórios Section -->
+  <rect x="80" y="350" width="370" height="180" rx="5" ry="5" fill="#e1f5fe" stroke="#03a9f4" stroke-width="2"/>
+  <text x="265" y="370" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#03a9f4">Relatórios Detalhados</text>
+  
+  <!-- Reports Types -->
+  <rect x="100" y="385" width="150" height="30" rx="5" ry="5" fill="#b3e5fc" stroke="#03a9f4" stroke-width="1"/>
+  <text x="175" y="405" font-family="Arial" font-size="12" text-anchor="middle">Relatório de Cliques</text>
+  
+  <rect x="100" y="425" width="150" height="30" rx="5" ry="5" fill="#b3e5fc" stroke="#03a9f4" stroke-width="1"/>
+  <text x="175" y="445" font-family="Arial" font-size="12" text-anchor="middle">Relatório de Conversões</text>
+  
+  <rect x="100" y="465" width="150" height="30" rx="5" ry="5" fill="#b3e5fc" stroke="#03a9f4" stroke-width="1"/>
+  <text x="175" y="485" font-family="Arial" font-size="12" text-anchor="middle">Relatório por Campanha</text>
+  
+  <rect x="280" y="385" width="150" height="30" rx="5" ry="5" fill="#b3e5fc" stroke="#03a9f4" stroke-width="1"/>
+  <text x="355" y="405" font-family="Arial" font-size="12" text-anchor="middle">Relatório por Canal</text>
+  
+  <rect x="280" y="425" width="150" height="30" rx="5" ry="5" fill="#b3e5fc" stroke="#03a9f4" stroke-width="1"/>
+  <text x="355" y="445" font-family="Arial" font-size="12" text-anchor="middle">Relatório por Período</text>
+  
+  <rect x="280" y="465" width="150" height="30" rx="5" ry="5" fill="#b3e5fc" stroke="#03a9f4" stroke-width="1"/>
+  <text x="355" y="485" font-family="Arial" font-size="12" text-anchor="middle">Exportar Dados</text>
+  
+  <!-- Pagamentos Section -->
+  <rect x="470" y="350" width="350" height="180" rx="5" ry="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="645" y="370" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#9c27b0">Financeiro e Pagamentos</text>
+  
+  <!-- Balance and Payments -->
+  <rect x="490" y="385" width="150" height="70" rx="5" ry="5" fill="#e1bee7" stroke="#9c27b0" stroke-width="1"/>
+  <text x="565" y="405" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Saldo Disponível</text>
+  <text x="565" y="435" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">R$ 1.249,80</text>
+  
+  <rect x="650" y="385" width="150" height="70" rx="5" ry="5" fill="#e1bee7" stroke="#9c27b0" stroke-width="1"/>
+  <text x="725" y="405" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Próximo Pagamento</text>
+  <text x="725" y="435" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">15/06/2025</text>
+  
+  <rect x="490" y="465" width="150" height="40" rx="5" ry="5" fill="#e1bee7" stroke="#9c27b0" stroke-width="1"/>
+  <text x="565" y="490" font-family="Arial" font-size="12" text-anchor="middle">Histórico de Pagamentos</text>
+  
+  <rect x="650" y="465" width="150" height="40" rx="5" ry="5" fill="#e1bee7" stroke="#9c27b0" stroke-width="1"/>
+  <text x="725" y="490" font-family="Arial" font-size="12" text-anchor="middle">Solicitar Saque</text>
+  
+  <!-- Main User Flows -->
+  <!-- Flow 1: Campaign to Materials -->
+  <path d="M530 240 C570 240, 570 215, 590 215" stroke="#2e7d32" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="585,210 595,215 585,220" fill="#2e7d32"/>
+  <text x="560" y="230" font-family="Arial" font-size="10" fill="#2e7d32">Selecionar material</text>
+  
+  <!-- Flow 2: Materials to Link Generation -->
+  <path d="M750 245 C780 245, 800 280, 800 320 C800 340, 780 360, 750 360" stroke="#e65100" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="755,355 745,360 755,365" fill="#e65100"/>
+  <text x="810" y="320" font-family="Arial" font-size="10" fill="#e65100" text-anchor="middle">Gerar</text>
+  <text x="810" y="335" font-family="Arial" font-size="10" fill="#e65100" text-anchor="middle">link</text>
+  
+  <!-- Flow 3: Dashboard to Reports -->
+  <path d="M170 310 C170 325, 170 340, 170 385" stroke="#0277bd" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="165,380 170,390 175,380" fill="#0277bd"/>
+  <text x="145" y="340" font-family="Arial" font-size="10" fill="#0277bd">Ver detalhes</text>
+  
+  <!-- Flow 4: Reports to Payments -->
+  <path d="M330 485 C380 485, 430 485, 490 485" stroke="#4a148c" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="485,480 495,485 485,490" fill="#4a148c"/>
+  <text x="410" y="470" font-family="Arial" font-size="10" fill="#4a148c">Verificar comissões</text>
+</svg>

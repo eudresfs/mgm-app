@@ -1,0 +1,101 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Fluxo de Criação de Campanha (Anunciante)</text>
+  
+  <!-- Main flow chart -->
+  <!-- Step 1: Login -->
+  <rect x="350" y="80" width="200" height="60" rx="10" ry="10" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+  <text x="450" y="115" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#1976d2">Login / Acesso ao Painel</text>
+  
+  <!-- Arrow Down -->
+  <path d="M450 140 L450 170" stroke="#757575" stroke-width="2" fill="none"/>
+  <polygon points="445,165 450,175 455,165" fill="#757575"/>
+  
+  <!-- Step 2: Nova Campanha -->
+  <rect x="350" y="170" width="200" height="60" rx="10" ry="10" fill="#c8e6c9" stroke="#388e3c" stroke-width="2"/>
+  <text x="450" y="205" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#388e3c">Criar Nova Campanha</text>
+  
+  <!-- Arrow Down -->
+  <path d="M450 230 L450 260" stroke="#757575" stroke-width="2" fill="none"/>
+  <polygon points="445,255 450,265 455,255" fill="#757575"/>
+  
+  <!-- Step 3: Configurações Básicas -->
+  <rect x="350" y="260" width="200" height="60" rx="10" ry="10" fill="#fff9c4" stroke="#fbc02d" stroke-width="2"/>
+  <text x="450" y="280" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fbc02d">Configurações Básicas</text>
+  <text x="450" y="300" font-family="Arial" font-size="12" text-anchor="middle" fill="#fbc02d">(Nome, Descrição, Período)</text>
+  
+  <!-- Arrow Down -->
+  <path d="M450 320 L450 350" stroke="#757575" stroke-width="2" fill="none"/>
+  <polygon points="445,345 450,355 455,345" fill="#757575"/>
+  
+  <!-- Step 4: Comissionamento -->
+  <rect x="350" y="350" width="200" height="60" rx="10" ry="10" fill="#ffccbc" stroke="#e64a19" stroke-width="2"/>
+  <text x="450" y="370" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#e64a19">Configurar Comissões</text>
+  <text x="450" y="390" font-family="Arial" font-size="12" text-anchor="middle" fill="#e64a19">(CPA, CPS, CPL, Regras)</text>
+  
+  <!-- Arrow Down -->
+  <path d="M450 410 L450 440" stroke="#757575" stroke-width="2" fill="none"/>
+  <polygon points="445,435 450,445 455,435" fill="#757575"/>
+  
+  <!-- Step 5: Materiais -->
+  <rect x="350" y="440" width="200" height="60" rx="10" ry="10" fill="#e1bee7" stroke="#8e24aa" stroke-width="2"/>
+  <text x="450" y="460" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#8e24aa">Adicionar Materiais</text>
+  <text x="450" y="480" font-family="Arial" font-size="12" text-anchor="middle" fill="#8e24aa">(Banners, Links, Textos)</text>
+  
+  <!-- Arrow Down -->
+  <path d="M450 500 L450 530" stroke="#757575" stroke-width="2" fill="none"/>
+  <polygon points="445,525 450,535 455,525" fill="#757575"/>
+  
+  <!-- Step 6: Revisar e Ativar -->
+  <rect x="350" y="530" width="200" height="60" rx="10" ry="10" fill="#dcedc8" stroke="#689f38" stroke-width="2"/>
+  <text x="450" y="550" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#689f38">Revisar e Ativar</text>
+  <text x="450" y="570" font-family="Arial" font-size="12" text-anchor="middle" fill="#689f38">Campanha</text>
+  
+  <!-- Side details for configuration steps -->
+  <!-- Configurações Básicas Details -->
+  <rect x="100" y="240" width="200" height="100" rx="5" ry="5" fill="#fffde7" stroke="#fbc02d" stroke-width="1"/>
+  <text x="200" y="260" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#fbc02d">Detalhes Básicos</text>
+  <text x="110" y="280" font-family="Arial" font-size="11" fill="#333">• Nome da campanha</text>
+  <text x="110" y="300" font-family="Arial" font-size="11" fill="#333">• Descrição e objetivos</text>
+  <text x="110" y="320" font-family="Arial" font-size="11" fill="#333">• Período de vigência</text>
+  
+  <!-- Arrow connecting to main flow -->
+  <path d="M300 290 L350 290" stroke="#fbc02d" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="345,285 355,290 345,295" fill="#fbc02d"/>
+  
+  <!-- Comissionamento Details -->
+  <rect x="600" y="330" width="200" height="100" rx="5" ry="5" fill="#ffebee" stroke="#e64a19" stroke-width="1"/>
+  <text x="700" y="350" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#e64a19">Opções de Comissão</text>
+  <text x="610" y="370" font-family="Arial" font-size="11" fill="#333">• CPA (Custo por Aquisição)</text>
+  <text x="610" y="390" font-family="Arial" font-size="11" fill="#333">• CPS (% do valor da venda)</text>
+  <text x="610" y="410" font-family="Arial" font-size="11" fill="#333">• Regras de qualificação</text>
+  
+  <!-- Arrow connecting to main flow -->
+  <path d="M600 380 L550 380" stroke="#e64a19" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="555,375 545,380 555,385" fill="#e64a19"/>
+  
+  <!-- Materiais Details -->
+  <rect x="100" y="420" width="200" height="100" rx="5" ry="5" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1"/>
+  <text x="200" y="440" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#8e24aa">Tipos de Materiais</text>
+  <text x="110" y="460" font-family="Arial" font-size="11" fill="#333">• Banners (diversos tamanhos)</text>
+  <text x="110" y="480" font-family="Arial" font-size="11" fill="#333">• Textos promocionais</text>
+  <text x="110" y="500" font-family="Arial" font-size="11" fill="#333">• Links diretos para produtos</text>
+  
+  <!-- Arrow connecting to main flow -->
+  <path d="M300 470 L350 470" stroke="#8e24aa" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="345,465 355,470 345,475" fill="#8e24aa"/>
+  
+  <!-- Revisar e Ativar Details -->
+  <rect x="600" y="510" width="200" height="100" rx="5" ry="5" fill="#f1f8e9" stroke="#689f38" stroke-width="1"/>
+  <text x="700" y="530" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#689f38">Antes de Ativar</text>
+  <text x="610" y="550" font-family="Arial" font-size="11" fill="#333">• Confirmar todos os detalhes</text>
+  <text x="610" y="570" font-family="Arial" font-size="11" fill="#333">• Definir processo de aprovação</text>
+  <text x="610" y="590" font-family="Arial" font-size="11" fill="#333">• Configurar notificações</text>
+  
+  <!-- Arrow connecting to main flow -->
+  <path d="M600 560 L550 560" stroke="#689f38" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="555,555 545,560 555,565" fill="#689f38"/>
+</svg>

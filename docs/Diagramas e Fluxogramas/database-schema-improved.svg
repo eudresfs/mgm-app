@@ -1,0 +1,195 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Esquema de Banco de Dados - Plataforma de Afiliados</text>
+  
+  <!-- Legend -->
+  <rect x="650" y="60" width="20" height="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="675" y="70" font-family="Arial" font-size="12" fill="#333">Usuários e Contas</text>
+  
+  <rect x="650" y="80" width="20" height="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="675" y="90" font-family="Arial" font-size="12" fill="#333">Campanhas e Configurações</text>
+  
+  <rect x="650" y="100" width="20" height="10" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="675" y="110" font-family="Arial" font-size="12" fill="#333">Tracking e Eventos</text>
+  
+  <rect x="650" y="120" width="20" height="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="675" y="130" font-family="Arial" font-size="12" fill="#333">Financeiro</text>
+  
+  <!-- CORE TABLES -->
+  
+  <!-- Users Table -->
+  <rect x="50" y="120" width="180" height="180" rx="5" ry="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <rect x="50" y="120" width="180" height="30" rx="5" ry="5" fill="#1565c0"/>
+  <text x="140" y="142" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Users</text>
+  
+  <!-- Users Fields -->
+  <text x="60" y="165" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="60" y="185" font-family="Arial" font-size="12" fill="#333">email: VARCHAR</text>
+  <text x="60" y="205" font-family="Arial" font-size="12" fill="#333">password_hash: VARCHAR</text>
+  <text x="60" y="225" font-family="Arial" font-size="12" fill="#333">role: ENUM</text>
+  <text x="60" y="245" font-family="Arial" font-size="12" fill="#333">status: ENUM</text>
+  <text x="60" y="265" font-family="Arial" font-size="12" fill="#333">created_at: TIMESTAMP</text>
+  <text x="60" y="285" font-family="Arial" font-size="12" fill="#333">updated_at: TIMESTAMP</text>
+  
+  <!-- Companies Table -->
+  <rect x="320" y="120" width="180" height="180" rx="5" ry="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <rect x="320" y="120" width="180" height="30" rx="5" ry="5" fill="#1565c0"/>
+  <text x="410" y="142" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Companies</text>
+  
+  <!-- Companies Fields -->
+  <text x="330" y="165" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="330" y="185" font-family="Arial" font-size="12" fill="#333">🔗 user_id: UUID</text>
+  <text x="330" y="205" font-family="Arial" font-size="12" fill="#333">name: VARCHAR</text>
+  <text x="330" y="225" font-family="Arial" font-size="12" fill="#333">website: VARCHAR</text>
+  <text x="330" y="245" font-family="Arial" font-size="12" fill="#333">segment: VARCHAR</text>
+  <text x="330" y="265" font-family="Arial" font-size="12" fill="#333">settings: JSONB</text>
+  <text x="330" y="285" font-family="Arial" font-size="12" fill="#333">created_at: TIMESTAMP</text>
+  
+  <!-- Affiliates Table -->
+  <rect x="590" y="120" width="180" height="180" rx="5" ry="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <rect x="590" y="120" width="180" height="30" rx="5" ry="5" fill="#1565c0"/>
+  <text x="680" y="142" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Affiliates</text>
+  
+  <!-- Affiliates Fields -->
+  <text x="600" y="165" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="600" y="185" font-family="Arial" font-size="12" fill="#333">🔗 user_id: UUID</text>
+  <text x="600" y="205" font-family="Arial" font-size="12" fill="#333">name: VARCHAR</text>
+  <text x="600" y="225" font-family="Arial" font-size="12" fill="#333">website: VARCHAR</text>
+  <text x="600" y="245" font-family="Arial" font-size="12" fill="#333">niche: VARCHAR</text>
+  <text x="600" y="265" font-family="Arial" font-size="12" fill="#333">payment_info: JSONB</text>
+  <text x="600" y="285" font-family="Arial" font-size="12" fill="#333">created_at: TIMESTAMP</text>
+  
+  <!-- CAMPAIGN TABLES -->
+  
+  <!-- Campaigns Table -->
+  <rect x="50" y="360" width="180" height="200" rx="5" ry="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="50" y="360" width="180" height="30" rx="5" ry="5" fill="#2e7d32"/>
+  <text x="140" y="382" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Campaigns</text>
+  
+  <!-- Campaigns Fields -->
+  <text x="60" y="405" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="60" y="425" font-family="Arial" font-size="12" fill="#333">🔗 company_id: UUID</text>
+  <text x="60" y="445" font-family="Arial" font-size="12" fill="#333">name: VARCHAR</text>
+  <text x="60" y="465" font-family="Arial" font-size="12" fill="#333">description: TEXT</text>
+  <text x="60" y="485" font-family="Arial" font-size="12" fill="#333">start_date: TIMESTAMP</text>
+  <text x="60" y="505" font-family="Arial" font-size="12" fill="#333">end_date: TIMESTAMP</text>
+  <text x="60" y="525" font-family="Arial" font-size="12" fill="#333">commission_type: ENUM</text>
+  <text x="60" y="545" font-family="Arial" font-size="12" fill="#333">commission_value: DECIMAL</text>
+  <text x="60" y="565" font-family="Arial" font-size="12" fill="#333">status: ENUM</text>
+  
+  <!-- Campaign Affiliates Table -->
+  <rect x="320" y="360" width="180" height="160" rx="5" ry="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="320" y="360" width="180" height="30" rx="5" ry="5" fill="#2e7d32"/>
+  <text x="410" y="382" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Campaign_Affiliates</text>
+  
+  <!-- Campaign Affiliates Fields -->
+  <text x="330" y="405" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="330" y="425" font-family="Arial" font-size="12" fill="#333">🔗 campaign_id: UUID</text>
+  <text x="330" y="445" font-family="Arial" font-size="12" fill="#333">🔗 affiliate_id: UUID</text>
+  <text x="330" y="465" font-family="Arial" font-size="12" fill="#333">status: ENUM</text>
+  <text x="330" y="485" font-family="Arial" font-size="12" fill="#333">joined_at: TIMESTAMP</text>
+  <text x="330" y="505" font-family="Arial" font-size="12" fill="#333">custom_commission: DECIMAL</text>
+  
+  <!-- Marketing Materials Table -->
+  <rect x="590" y="360" width="180" height="160" rx="5" ry="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="590" y="360" width="180" height="30" rx="5" ry="5" fill="#2e7d32"/>
+  <text x="680" y="382" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Marketing_Materials</text>
+  
+  <!-- Marketing Materials Fields -->
+  <text x="600" y="405" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="600" y="425" font-family="Arial" font-size="12" fill="#333">🔗 campaign_id: UUID</text>
+  <text x="600" y="445" font-family="Arial" font-size="12" fill="#333">type: ENUM</text>
+  <text x="600" y="465" font-family="Arial" font-size="12" fill="#333">name: VARCHAR</text>
+  <text x="600" y="485" font-family="Arial" font-size="12" fill="#333">content: TEXT/URL</text>
+  <text x="600" y="505" font-family="Arial" font-size="12" fill="#333">created_at: TIMESTAMP</text>
+  
+  <!-- TRACKING TABLES -->
+  
+  <!-- Tracking Events Table -->
+  <rect x="185" y="580" width="180" height="180" rx="5" ry="5" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <rect x="185" y="580" width="180" height="30" rx="5" ry="5" fill="#ef6c00"/>
+  <text x="275" y="602" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Tracking_Events</text>
+  
+  <!-- Tracking Events Fields -->
+  <text x="195" y="625" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="195" y="645" font-family="Arial" font-size="12" fill="#333">🔗 affiliate_id: UUID</text>
+  <text x="195" y="665" font-family="Arial" font-size="12" fill="#333">🔗 campaign_id: UUID</text>
+  <text x="195" y="685" font-family="Arial" font-size="12" fill="#333">event_type: ENUM</text>
+  <text x="195" y="705" font-family="Arial" font-size="12" fill="#333">visitor_id: VARCHAR</text>
+  <text x="195" y="725" font-family="Arial" font-size="12" fill="#333">metadata: JSONB</text>
+  <text x="195" y="745" font-family="Arial" font-size="12" fill="#333">created_at: TIMESTAMP</text>
+  
+  <!-- FINANCIAL TABLES -->
+  
+  <!-- Conversions Table -->
+  <rect x="455" y="580" width="180" height="180" rx="5" ry="5" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <rect x="455" y="580" width="180" height="30" rx="5" ry="5" fill="#7b1fa2"/>
+  <text x="545" y="602" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Conversions</text>
+  
+  <!-- Conversions Fields -->
+  <text x="465" y="625" font-family="Arial" font-size="12" fill="#333">🔑 id: UUID</text>
+  <text x="465" y="645" font-family="Arial" font-size="12" fill="#333">🔗 tracking_event_id: UUID</text>
+  <text x="465" y="665" font-family="Arial" font-size="12" fill="#333">🔗 affiliate_id: UUID</text>
+  <text x="465" y="685" font-family="Arial" font-size="12" fill="#333">🔗 campaign_id: UUID</text>
+  <text x="465" y="705" font-family="Arial" font-size="12" fill="#333">order_id: VARCHAR</text>
+  <text x="465" y="725" font-family="Arial" font-size="12" fill="#333">amount: DECIMAL</text>
+  <text x="465" y="745" font-family="Arial" font-size="12" fill="#333">commission: DECIMAL</text>
+  
+  <!-- Relationships -->
+  
+  <!-- Users to Companies -->
+  <path d="M230 210 L320 210" stroke="#1565c0" stroke-width="1.5" fill="none"/>
+  <polygon points="315,205 325,210 315,215" fill="#1565c0"/>
+  <text x="265" y="200" font-family="Arial" font-size="10" fill="#1565c0">1:1</text>
+  
+  <!-- Users to Affiliates -->
+  <path d="M230 160 C420 160, 420 160, 590 160" stroke="#1565c0" stroke-width="1.5" fill="none"/>
+  <polygon points="585,155 595,160 585,165" fill="#1565c0"/>
+  <text x="370" y="150" font-family="Arial" font-size="10" fill="#1565c0">1:1</text>
+  
+  <!-- Companies to Campaigns -->
+  <path d="M410 300 C410 330, 140 330, 140 360" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+  <polygon points="135,355 140,365 145,355" fill="#2e7d32"/>
+  <text x="400" y="320" font-family="Arial" font-size="10" fill="#2e7d32">1:N</text>
+  
+  <!-- Campaigns to Campaign_Affiliates -->
+  <path d="M230 440 L320 440" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+  <polygon points="315,435 325,440 315,445" fill="#2e7d32"/>
+  <text x="270" y="430" font-family="Arial" font-size="10" fill="#2e7d32">1:N</text>
+  
+  <!-- Affiliates to Campaign_Affiliates -->
+  <path d="M680 300 C680 330, 410 330, 410 360" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+  <polygon points="405,355 410,365 415,355" fill="#2e7d32"/>
+  <text x="600" y="320" font-family="Arial" font-size="10" fill="#2e7d32">1:N</text>
+  
+  <!-- Campaigns to Marketing_Materials -->
+  <path d="M230 460 C500 460, 500 460, 590 460" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+  <polygon points="585,455 595,460 585,465" fill="#2e7d32"/>
+  <text x="350" y="450" font-family="Arial" font-size="10" fill="#2e7d32">1:N</text>
+  
+  <!-- Campaign_Affiliates to Tracking_Events -->
+  <path d="M410 520 C410 550, 275 550, 275 580" stroke="#ef6c00" stroke-width="1.5" fill="none"/>
+  <polygon points="270,575 275,585 280,575" fill="#ef6c00"/>
+  <text x="375" y="540" font-family="Arial" font-size="10" fill="#ef6c00">1:N</text>
+  
+  <!-- Tracking_Events to Conversions -->
+  <path d="M365 670 L455 670" stroke="#7b1fa2" stroke-width="1.5" fill="none"/>
+  <polygon points="450,665 460,670 450,675" fill="#7b1fa2"/>
+  <text x="400" y="660" font-family="Arial" font-size="10" fill="#7b1fa2">1:1</text>
+  
+  <!-- Campaigns to Tracking_Events -->
+  <path d="M140 560 C140 570, 140 570, 140 670 C140 670, 140 670, 185 670" stroke="#ef6c00" stroke-width="1.5" fill="none" stroke-dasharray="4,2"/>
+  <polygon points="180,665 190,670 180,675" fill="#ef6c00"/>
+  
+  <!-- Affiliates to Tracking_Events -->
+  <path d="M680 300 C680 600, 680 600, 365 600" stroke="#ef6c00" stroke-width="1.5" fill="none" stroke-dasharray="4,2"/>
+  <polygon points="370,595 360,600 370,605" fill="#ef6c00"/>
+  
+  <!-- Sub-titles for clarity -->
+  <text x="140" y="100" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Gestão de Contas</text>
+  <text x="140" y="340" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Campanhas</text>
+  <text x="320" y="560" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Tracking e Financeiro</text>
+</svg>

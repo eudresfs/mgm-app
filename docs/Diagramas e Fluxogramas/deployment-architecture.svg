@@ -1,0 +1,247 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="650" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Arquitetura de Deployment - Plataforma de Afiliados</text>
+  
+  <!-- Legend -->
+  <rect x="720" y="70" width="14" height="14" rx="2" ry="2" fill="#e1f5fe" stroke="#0288d1" stroke-width="1"/>
+  <text x="740" y="82" font-family="Arial" font-size="12" fill="#333">Frontend</text>
+  
+  <rect x="720" y="90" width="14" height="14" rx="2" ry="2" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="740" y="102" font-family="Arial" font-size="12" fill="#333">Backend</text>
+  
+  <rect x="720" y="110" width="14" height="14" rx="2" ry="2" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <text x="740" y="122" font-family="Arial" font-size="12" fill="#333">Banco de Dados</text>
+  
+  <rect x="720" y="130" width="14" height="14" rx="2" ry="2" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="740" y="142" font-family="Arial" font-size="12" fill="#333">Infraestrutura</text>
+  
+  <rect x="800" y="70" width="14" height="14" rx="2" ry="2" fill="none" stroke="#757575" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="820" y="82" font-family="Arial" font-size="12" fill="#333">PoC</text>
+  
+  <rect x="800" y="90" width="14" height="14" rx="2" ry="2" fill="none" stroke="#757575" stroke-width="1"/>
+  <text x="820" y="102" font-family="Arial" font-size="12" fill="#333">MVP</text>
+  
+  <rect x="800" y="110" width="14" height="14" rx="2" ry="2" fill="none" stroke="#757575" stroke-width="1" stroke-width="2"/>
+  <text x="820" y="122" font-family="Arial" font-size="12" fill="#333">Full Product</text>
+  
+  <!-- Cloud Platform Container -->
+  <rect x="50" y="160" width="800" height="470" rx="10" ry="10" fill="#f3e5f5" fill-opacity="0.3" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="450" y="180" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#7b1fa2">AWS Cloud</text>
+  
+  <!-- VPC Container -->
+  <rect x="80" y="200" width="740" height="410" rx="5" ry="5" fill="#f3e5f5" fill-opacity="0.2" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="120" y="220" font-family="Arial" font-size="14" fill="#7b1fa2">VPC</text>
+  
+  <!-- Production Environment -->
+  <rect x="100" y="240" width="500" height="350" rx="5" ry="5" fill="#bbdefb" fill-opacity="0.2" stroke="#1976d2" stroke-width="1"/>
+  <text x="350" y="260" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1976d2">Ambiente de Produção</text>
+  
+  <!-- Frontend Layer -->
+  <rect x="120" y="280" width="460" height="90" rx="5" ry="5" fill="#e1f5fe" stroke="#0288d1" stroke-width="1"/>
+  <text x="350" y="300" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#0288d1">Frontend Layer</text>
+  
+  <!-- CDN -->
+  <rect x="140" y="320" width="100" height="40" rx="5" ry="5" fill="#b3e5fc" stroke="#0288d1" stroke-width="1"/>
+  <text x="190" y="343" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">CloudFront</text>
+  
+  <!-- S3 -->
+  <rect x="250" y="320" width="100" height="40" rx="5" ry="5" fill="#b3e5fc" stroke="#0288d1" stroke-width="1"/>
+  <text x="300" y="343" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">S3 Bucket</text>
+  <text x="300" y="358" font-family="Arial" font-size="10" text-anchor="middle">Static Assets</text>
+  
+  <!-- Route53 -->
+  <rect x="460" y="320" width="100" height="40" rx="5" ry="5" fill="#b3e5fc" stroke="#0288d1" stroke-width="1"/>
+  <text x="510" y="343" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Route 53</text>
+  <text x="510" y="358" font-family="Arial" font-size="10" text-anchor="middle">DNS</text>
+  
+  <!-- Backend Layer -->
+  <rect x="120" y="380" width="460" height="90" rx="5" ry="5" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="350" y="400" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#388e3c">Backend Layer</text>
+  
+  <!-- API Gateway -->
+  <rect x="140" y="420" width="100" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="190" y="443" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">API Gateway</text>
+  
+  <!-- ECS Containers -->
+  <rect x="250" y="420" width="100" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="300" y="443" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">ECS Fargate</text>
+  <text x="300" y="458" font-family="Arial" font-size="10" text-anchor="middle">API Services</text>
+  
+  <!-- SQS -->
+  <rect x="360" y="420" width="100" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="410" y="443" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">SQS</text>
+  <text x="410" y="458" font-family="Arial" font-size="10" text-anchor="middle">Message Queue</text>
+  
+  <!-- Lambda -->
+  <rect x="460" y="420" width="100" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="510" y="443" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Lambda</text>
+  <text x="510" y="458" font-family="Arial" font-size="10" text-anchor="middle">Event Processing</text>
+  
+  <!-- Database Layer -->
+  <rect x="120" y="480" width="460" height="90" rx="5" ry="5" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <text x="350" y="500" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#f57c00">Database Layer</text>
+  
+  <!-- RDS -->
+  <rect x="140" y="520" width="100" height="40" rx="5" ry="5" fill="#ffe0b2" stroke="#f57c00" stroke-width="1"/>
+  <text x="190" y="543" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">RDS</text>
+  <text x="190" y="558" font-family="Arial" font-size="10" text-anchor="middle">PostgreSQL</text>
+  
+  <!-- ElastiCache -->
+  <rect x="250" y="520" width="100" height="40" rx="5" ry="5" fill="#ffe0b2" stroke="#f57c00" stroke-width="1"/>
+  <text x="300" y="543" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">ElastiCache</text>
+  <text x="300" y="558" font-family="Arial" font-size="10" text-anchor="middle">Redis</text>
+  
+  <!-- S3 Data Lake -->
+  <rect x="360" y="520" width="100" height="40" rx="5" ry="5" fill="#ffe0b2" stroke="#f57c00" stroke-width="1"/>
+  <text x="410" y="543" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">S3</text>
+  <text x="410" y="558" font-family="Arial" font-size="10" text-anchor="middle">Data Lake</text>
+  
+  <!-- DynamoDB -->
+  <rect x="460" y="520" width="100" height="40" rx="5" ry="5" fill="#ffe0b2" stroke="#f57c00" stroke-width="1"/>
+  <text x="510" y="543" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">DynamoDB</text>
+  <text x="510" y="558" font-family="Arial" font-size="10" text-anchor="middle">Events</text>
+  
+  <!-- Monitoring & DevOps Tools -->
+  <rect x="620" y="240" width="180" height="350" rx="5" ry="5" fill="#ede7f6" stroke="#673ab7" stroke-width="1"/>
+  <text x="710" y="260" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#673ab7">DevOps & Monitoramento</text>
+  
+  <!-- CloudWatch -->
+  <rect x="640" y="280" width="140" height="40" rx="5" ry="5" fill="#d1c4e9" stroke="#673ab7" stroke-width="1"/>
+  <text x="710" y="303" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">CloudWatch</text>
+  <text x="710" y="318" font-family="Arial" font-size="10" text-anchor="middle">Logs & Métricas</text>
+  
+  <!-- CI/CD -->
+  <rect x="640" y="330" width="140" height="40" rx="5" ry="5" fill="#d1c4e9" stroke="#673ab7" stroke-width="1"/>
+  <text x="710" y="353" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">GitHub Actions</text>
+  <text x="710" y="368" font-family="Arial" font-size="10" text-anchor="middle">CI/CD Pipeline</text>
+  
+  <!-- AWS WAF -->
+  <rect x="640" y="380" width="140" height="40" rx="5" ry="5" fill="#d1c4e9" stroke="#673ab7" stroke-width="1"/>
+  <text x="710" y="403" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">AWS WAF</text>
+  <text x="710" y="418" font-family="Arial" font-size="10" text-anchor="middle">Segurança</text>
+  
+  <!-- Secrets Manager -->
+  <rect x="640" y="430" width="140" height="40" rx="5" ry="5" fill="#d1c4e9" stroke="#673ab7" stroke-width="1"/>
+  <text x="710" y="453" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Secrets Manager</text>
+  <text x="710" y="468" font-family="Arial" font-size="10" text-anchor="middle">Credenciais</text>
+  
+  <!-- CloudTrail -->
+  <rect x="640" y="480" width="140" height="40" rx="5" ry="5" fill="#d1c4e9" stroke="#673ab7" stroke-width="1"/>
+  <text x="710" y="503" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">CloudTrail</text>
+  <text x="710" y="518" font-family="Arial" font-size="10" text-anchor="middle">Auditoria</text>
+  
+  <!-- Terraform -->
+  <rect x="640" y="530" width="140" height="40" rx="5" ry="5" fill="#d1c4e9" stroke="#673ab7" stroke-width="1"/>
+  <text x="710" y="553" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Terraform</text>
+  <text x="710" y="568" font-family="Arial" font-size="10" text-anchor="middle">Infrastructure as Code</text>
+  
+  <!-- External Users -->
+  <rect x="50" y="80" width="120" height="60" rx="30" ry="30" fill="#e0f7fa" stroke="#00acc1" stroke-width="1.5"/>
+  <text x="110" y="120" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Navegadores</text>
+  
+  <!-- Affiliate Access -->
+  <rect x="200" y="80" width="120" height="60" rx="30" ry="30" fill="#e0f7fa" stroke="#00acc1" stroke-width="1.5"/>
+  <text x="260" y="120" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Afiliados</text>
+  
+  <!-- Company Access -->
+  <rect x="350" y="80" width="120" height="60" rx="30" ry="30" fill="#e0f7fa" stroke="#00acc1" stroke-width="1.5"/>
+  <text x="410" y="120" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Anunciantes</text>
+  
+  <!-- External Integration -->
+  <rect x="500" y="80" width="170" height="60" rx="30" ry="30" fill="#e0f7fa" stroke="#00acc1" stroke-width="1.5"/>
+  <text x="585" y="110" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Integrações</text>
+  <text x="585" y="130" font-family="Arial" font-size="10" text-anchor="middle">(E-commerce, Pagamentos)</text>
+  
+  <!-- Connections -->
+  <!-- Users to CloudFront -->
+  <path d="M110 140 L110 160 L190 160 L190 320" stroke="#00acc1" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="185,315 190,325 195,315" fill="#00acc1"/>
+  
+  <!-- Affiliates to CloudFront -->
+  <path d="M260 140 L260 230 L190 230 L190 320" stroke="#00acc1" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="185,315 190,325 195,315" fill="#00acc1"/>
+  
+  <!-- Companies to CloudFront -->
+  <path d="M410 140 L410 230 L190 230 L190 320" stroke="#00acc1" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="185,315 190,325 195,315" fill="#00acc1"/>
+  
+  <!-- External to API Gateway -->
+  <path d="M585 140 L585 240 L190 240 L190 420" stroke="#00acc1" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="185,415 190,425 195,415" fill="#00acc1"/>
+  
+  <!-- CloudFront to S3 -->
+  <path d="M240 340 L250 340" stroke="#0288d1" stroke-width="1.5" fill="none"/>
+  <polygon points="245,335 255,340 245,345" fill="#0288d1"/>
+  
+  <!-- CloudFront to API Gateway -->
+  <path d="M190 360 L190 420" stroke="#0288d1" stroke-width="1.5" fill="none"/>
+  <polygon points="185,415 190,425 195,415" fill="#0288d1"/>
+  
+  <!-- API Gateway to ECS -->
+  <path d="M240 440 L250 440" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+  <polygon points="245,435 255,440 245,445" fill="#388e3c"/>
+  
+  <!-- ECS to SQS -->
+  <path d="M350 440 L360 440" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+  <polygon points="355,435 365,440 355,445" fill="#388e3c"/>
+  
+  <!-- SQS to Lambda -->
+  <path d="M460 440 L470 440" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+  <polygon points="465,435 475,440 465,445" fill="#388e3c"/>
+  
+  <!-- ECS to RDS -->
+  <path d="M300 460 L300 490 L190 490 L190 520" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+  <polygon points="185,515 190,525 195,515" fill="#388e3c"/>
+  
+  <!-- ECS to ElastiCache -->
+  <path d="M300 460 L300 490 L300 520" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+  <polygon points="295,515 300,525 305,515" fill="#388e3c"/>
+  
+  <!-- Lambda to DynamoDB -->
+  <path d="M510 460 L510 495 L510 520" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+  <polygon points="505,515 510,525 515,515" fill="#388e3c"/>
+  
+  <!-- Lambda to S3 Data Lake -->
+  <path d="M510 460 L510 490 L410 490 L410 520" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+  <polygon points="405,515 410,525 415,515" fill="#388e3c"/>
+  
+  <!-- Phase Labels -->
+  <!-- PoC Phase -->
+  <rect x="120" y="600" width="140" height="30" rx="15" ry="15" fill="none" stroke="#757575" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="190" y="620" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#757575">PoC (2-3 meses)</text>
+  
+  <!-- MVP Phase -->
+  <rect x="290" y="600" width="140" height="30" rx="15" ry="15" fill="none" stroke="#757575" stroke-width="1"/>
+  <text x="360" y="620" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#757575">MVP (4-6 meses)</text>
+  
+  <!-- Full Product Phase -->
+  <rect x="460" y="600" width="180" height="30" rx="15" ry="15" fill="none" stroke="#757575" stroke-width="2"/>
+  <text x="550" y="620" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#757575">Full Product (6+ meses)</text>
+  
+  <!-- Phase Indicators -->
+  <!-- PoC Components -->
+  <rect x="250" y="319" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="140" y="419" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="250" y="419" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="140" y="519" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1" stroke-dasharray="3,2"/>
+  
+  <!-- MVP Components -->
+  <rect x="140" y="319" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1"/>
+  <rect x="360" y="419" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1"/>
+  <rect x="250" y="519" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1"/>
+  <rect x="640" y="279" width="141" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1"/>
+  <rect x="640" y="329" width="141" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1"/>
+  <rect x="640" y="429" width="141" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="1"/>
+  
+  <!-- Full Product Components -->
+  <rect x="460" y="319" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="2"/>
+  <rect x="460" y="419" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="2"/>
+  <rect x="360" y="519" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="2"/>
+  <rect x="460" y="519" width="101" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="2"/>
+  <rect x="640" y="379" width="141" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="2"/>
+  <rect x="640" y="479" width="141" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="2"/>
+  <rect x="640" y="529" width="141" height="42" rx="6" ry="6" fill="none" stroke="#757575" stroke-width="2"/>
+</svg>
