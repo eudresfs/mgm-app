@@ -364,7 +364,7 @@ export const BarChart = React.forwardRef<
   React.ComponentProps<typeof RechartsPrimitive.BarChart>
 >(({ children, ...props }, ref) => {
   return (
-    <RechartsPrimitive.BarChart ref={ref} {...props}>
+    <RechartsPrimitive.BarChart {...props}>
       {children}
     </RechartsPrimitive.BarChart>
   );
@@ -377,7 +377,7 @@ export const LineChart = React.forwardRef<
   React.ComponentProps<typeof RechartsPrimitive.LineChart>
 >(({ children, ...props }, ref) => {
   return (
-    <RechartsPrimitive.LineChart ref={ref} {...props}>
+    <RechartsPrimitive.LineChart {...props}>
       {children}
     </RechartsPrimitive.LineChart>
   );
@@ -390,7 +390,7 @@ export const PieChart = React.forwardRef<
   React.ComponentProps<typeof RechartsPrimitive.PieChart>
 >(({ children, ...props }, ref) => {
   return (
-    <RechartsPrimitive.PieChart ref={ref} {...props}>
+    <RechartsPrimitive.PieChart {...props}>
       {children}
     </RechartsPrimitive.PieChart>
   );
