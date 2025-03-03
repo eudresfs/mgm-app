@@ -1,4 +1,6 @@
 node_modules/
+src/node_modules/
+frontend-new/node_modules/
 .env
 .env.local
 .env.development.local
@@ -26,4 +28,3 @@ out/
 .cache/
 .parcel-cache/
 .turbo
-
