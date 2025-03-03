@@ -6,15 +6,15 @@
 const express = require('express');
 const router = express.Router();
 const campaignService = require('../services/campaign');
-const authenticate = require('../middleware/authenticate');
-const validation = require('../middleware/validation');
+const auth = require('../middleware/authenticate');
+const { campaignRules } = require('../middleware/campaignValidation');
 
 /**
  * @route GET /api/campaigns
  * @desc Get all campaigns for merchant
  * @access Private
  */
-router.get('/', authenticate, async (req, res) => {
+router.get('/', auth.authenticate, async (req, res) => {
   try {
     const merchantId = req.user.merchantId;
     const filters = req.query;
@@ -30,7 +30,7 @@ router.get('/', authenticate, async (req, res) => {
  * @desc Get campaign by ID
  * @access Private
  */
-router.get('/:id', authenticate, async (req, res) => {
+router.get('/:id', auth.authenticate, async (req, res) => {
   try {
     const campaign = await Campaign.findById(req.params.id);
     if (!campaign) {
@@ -47,7 +47,7 @@ router.get('/:id', authenticate, async (req, res) => {
  * @desc Create a new campaign
  * @access Private
  */
-router.post('/', [authenticate, validation.campaignRules()], async (req, res) => {
+router.post('/', [auth.authenticate, campaignRules()], async (req, res) => {
   try {
     const campaignData = {
       ...req.body,
@@ -65,7 +65,7 @@ router.post('/', [authenticate, validation.campaignRules()], async (req, res) =>
  * @desc Update an existing campaign
  * @access Private
  */
-router.put('/:id', [authenticate, validation.campaignRules()], async (req, res) => {
+router.put('/:id', [auth.authenticate, campaignRules()], async (req, res) => {
   try {
     const campaign = await campaignService.updateCampaign(req.params.id, req.body);
     res.status(200).json(campaign);
@@ -82,7 +82,7 @@ router.put('/:id', [authenticate, validation.campaignRules()], async (req, res) 
  * @desc Duplicate an existing campaign
  * @access Private
  */
-router.post('/:id/duplicate', authenticate, async (req, res) => {
+router.post('/:id/duplicate', auth.authenticate, async (req, res) => {
   try {
     const campaign = await campaignService.duplicateCampaign(req.params.id);
     res.status(201).json(campaign);
@@ -99,7 +99,7 @@ router.post('/:id/duplicate', authenticate, async (req, res) => {
  * @desc Process affiliate approval for campaign
  * @access Private
  */
-router.post('/:id/approve/:affiliateId', authenticate, async (req, res) => {
+router.post('/:id/approve/:affiliateId', auth.authenticate, async (req, res) => {
   try {
     const result = await campaignService.processAffiliateApproval(
       req.params.id,
@@ -119,7 +119,7 @@ router.post('/:id/approve/:affiliateId', authenticate, async (req, res) => {
  * @desc Get campaigns available for affiliates
  * @access Private (Affiliate)
  */
-router.get('/available', authenticate, async (req, res) => {
+router.get('/available', auth.authenticate, async (req, res) => {
   try {
     const affiliateId = req.user.affiliateId;
     const filters = req.query;
