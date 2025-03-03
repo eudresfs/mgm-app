@@ -227,17 +227,17 @@ A plataforma de marketing de afiliados será uma solução SaaS destinada a pequ
 - [x] Duplicação e versionamento de campanhas
 
 ### 4.3 Módulo de Afiliados
-- [ ] Descoberta inteligente de campanhas relevantes
-- [ ] Painel personalizado com métricas em tempo real
-- [ ] Geração e gerenciamento de links de afiliado
-- [ ] Editor de materiais promocionais (personalização limitada)
-- [ ] Ferramentas de compartilhamento integradas
-- [ ] Histórico detalhado de cliques e conversões
-- [ ] Relatórios de desempenho por canal e período
-- [ ] Extrato financeiro completo (pendente, aprovado, pago)
-- [ ] Configuração de preferências de pagamento
-- [ ] Centro de aprendizado com dicas de otimização
-- [ ] Sistema de metas e recompensas (gamificação)
+- [x] Descoberta inteligente de campanhas relevantes
+- [x] Painel personalizado com métricas em tempo real
+- [x] Geração e gerenciamento de links de afiliado
+- [x] Editor de materiais promocionais (personalização limitada)
+- [x] Ferramentas de compartilhamento integradas
+- [x] Histórico detalhado de cliques e conversões
+- [x] Relatórios de desempenho por canal e período
+- [x] Extrato financeiro completo (pendente, aprovado, pago)
+- [x] Configuração de preferências de pagamento
+- [x] Centro de aprendizado com dicas de otimização
+- [x] Sistema de metas e recompensas (gamificação)
 
 ### 4.4 Módulo de Rastreamento e Conversões
 - [ ] Múltiplos métodos de rastreamento (cookies, fingerprinting, UTM)
@@ -342,7 +342,7 @@ A plataforma de marketing de afiliados será uma solução SaaS destinada a pequ
 #### Frontend
 - **Framework**: React.js com Next.js
 - **State Management**: Redux ou Context API
-- **UI Components**: Material UI ou Tailwind CSS
+- **UI Components**: shadcn-ui com Tailwind Command Palette CSS
 - **Charts/Vizualização**: D3.js ou Chart.js
 - **Testing**: Jest, React Testing Library
 

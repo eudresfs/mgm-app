@@ -99,9 +99,16 @@ async function trackClick(trackingId, req, res) {
     const fingerprint = new Fingerprint({
       canvas: true,
       screen: true,
-      fonts: true
+      fonts: true,
+      audio: true,
+      webgl: true,
+      plugins: true
     });
     trackingData.fingerprint = fingerprint.get();
+    
+    // Check for fraud using the fraud detection service
+    const fraudDetection = require('./fraudDetection');
+    const fraudResults = await fraudDetection.validateClick(trackingData);
 
     // Set tracking cookie
     if (res) {

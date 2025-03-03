@@ -4,11 +4,34 @@
  */
 
 const { body, validationResult } = require('express-validator');
+const { isValidObjectId } = require('mongoose');
+const Campaign = require('../models/campaign');
+const logger = require('../utils/logger');
 
 /**
  * Validation rules for campaign creation and updates
  */
 exports.campaignRules = () => {
+  const validateCommissionTiers = (value, { req }) => {
+    if (req.body.commission.type === 'tiered' && (!Array.isArray(value) || value.length === 0)) {
+      throw new Error('Tiered commission requires at least one tier');
+    }
+    return true;
+  };
+
+  const validateRecurringRules = (value, { req }) => {
+    if (req.body.type === 'recurring' && !value) {
+      throw new Error('Recurring campaign requires recurring rules');
+    }
+    return true;
+  };
+
+  const validateMultiLevelRules = (value, { req }) => {
+    if (req.body.type === 'multi_level' && (!Array.isArray(value) || value.length === 0)) {
+      throw new Error('Multi-level campaign requires at least one level');
+    }
+    return true;
+  };
   return [
     // Basic campaign information
     body('name').trim().notEmpty().withMessage('Campaign name is required'),
@@ -92,6 +115,49 @@ exports.validate = (req, res, next) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
+  next();
+};
+
+/**
+ * Validate campaign budget constraints
+ */
+exports.validateBudget = (req, res, next) => {
+  const { budget } = req.body;
+  
+  if (budget) {
+    // If daily budget is set, it should not exceed total budget
+    if (budget.daily && budget.total && budget.daily > budget.total) {
+      return res.status(400).json({ 
+        error: 'Daily budget cannot exceed total budget' 
+      });
+    }
+    
+    // Initialize remaining budget if not provided
+    if (budget.total && !budget.remaining) {
+      req.body.budget.remaining = budget.total;
+    }
+  }
+  
+  next();
+};
+
+/**
+ * Validate campaign dates
+ */
+exports.validateDates = (req, res, next) => {
+  const { startDate, endDate } = req.body;
+  
+  if (startDate && endDate) {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    
+    if (end <= start) {
+      return res.status(400).json({ 
+        error: 'End date must be after start date' 
+      });
+    }
+  }
+  
   next();
 };
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const authService = require('../services/auth');
-const { validateRegistration, validateLogin } = require('../middleware/validation');
+const { validateRegistration, validateLogin, validateRefreshToken } = require('../middleware/validation');
 const { rateLimiter } = require('../middleware/rateLimiter');
 const { authenticate } = require('../middleware/authenticate');
 
@@ -19,10 +19,50 @@ router.post('/register', validateRegistration, rateLimiter, async (req, res) => 
 router.post('/login', validateLogin, rateLimiter, async (req, res) => {
   try {
     const { email, password } = req.body;
-    const result = await authService.login(email, password);
+    // Collect device info for security tracking
+    const deviceInfo = {
+      userAgent: req.headers['user-agent'],
+      ip: req.ip
+    };
+    const result = await authService.login(email, password, deviceInfo);
     res.status(200).json(result);
   } catch (error) {
     res.status(401).json({ error: error.message });
+  }
+});
+
+// Refresh token
+router.post('/refresh-token', validateRefreshToken, rateLimiter, async (req, res) => {
+  try {
+    const { refreshToken } = req.body;
+    const result = await authService.refreshToken(refreshToken);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(401).json({ error: error.message });
+  }
+});
+
+// Revoke token (logout)
+router.post('/logout', authenticate, async (req, res) => {
+  try {
+    const { refreshToken } = req.body;
+    if (!refreshToken) {
+      return res.status(400).json({ error: 'Refresh token is required' });
+    }
+    await authService.revokeToken(refreshToken);
+    res.status(200).json({ success: true, message: 'Logged out successfully' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Revoke all tokens for user (logout from all devices)
+router.post('/logout-all', authenticate, async (req, res) => {
+  try {
+    await authService.revokeAllUserTokens(req.user._id);
+    res.status(200).json({ success: true, message: 'Logged out from all devices successfully' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
 });
 
