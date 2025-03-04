@@ -13,10 +13,12 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/mgm
       - REDIS_URL=redis://redis:6379
       - KAFKA_BROKERS=kafka:9092
+      - MONGODB_URI=mongodb://admin:password@mongodb:27017/
     depends_on:
       - db
       - redis
       - kafka
+      - mongodb
     volumes:
       - ./src:/app/src
     networks:
@@ -56,6 +58,19 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
+    networks:
+      - mgm-network
+
+  # MongoDB
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongodb_data:/data/db
     networks:
       - mgm-network
 
@@ -117,6 +132,7 @@ volumes:
   zookeeper_data:
   prometheus_data:
   grafana_data:
+  mongodb_data:
 
 networks:
   mgm-network:
