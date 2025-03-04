@@ -6,6 +6,10 @@
 const mongoose = require('mongoose');
 
 const campaignSchema = new mongoose.Schema({
+  startDate: {
+    type: Date,
+    required: true
+  },
   name: {
     type: String,
     required: true,

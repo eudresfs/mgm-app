@@ -45,7 +45,7 @@ describe('Advanced Authentication Tests', () => {
       name: 'Test User',
       email: 'user@example.com',
       password: 'Test@123',
-      role: 'user',
+      role: 'affiliate',
       isEmailVerified: true
     });
     

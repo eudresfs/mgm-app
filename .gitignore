@@ -1,6 +1,6 @@
-node_modules
-src/node_modules
-frontend-new/node_modules
+node_modules/
+src/node_modules/
+frontend/node_modules/
 .env
 .env.local
 .env.development.local
@@ -28,3 +28,16 @@ out/
 .cache/
 .parcel-cache/
 .turbo
+test-logger.js
+jest.config.js
+jest.setup.js
+generate-test-report.js
+src/__tests__/
+src/__mocks__/
+performance/
+reporters/
+reports/
+logs/
+docs/
+.storybooks/
+scripts/

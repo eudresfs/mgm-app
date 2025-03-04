@@ -1,0 +1,4 @@
+2025-03-03T23:13:01.858Z ERROR: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (C:\Users\eudre\OneDrive\Desktop\Projetos inacabados\MGM\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (C:\Users\eudre\OneDrive\Desktop\Projetos inacabados\MGM\node_modules\mongoose\lib\connection.js:791:11)

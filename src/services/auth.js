@@ -13,7 +13,7 @@ class AuthService {
    * @param {Object} user - User object
    * @returns {String} JWT access token
    */
-  generateAccessToken(user) {
+  generateToken(user) {
     return jwt.sign(
       { userId: user._id, role: user.role },
       process.env.JWT_SECRET || 'test-secret-key',
@@ -96,8 +96,26 @@ class AuthService {
       throw new Error('Please verify your email before logging in');
     }
 
+    // Check if 2FA is enabled for this user
+    if (user.twoFactorEnabled) {
+      // Generate a temporary token for 2FA verification
+      const twoFactorToken = jwt.sign(
+        { userId: user._id, twoFactorAuth: true },
+        process.env.JWT_SECRET || 'test-secret-key',
+        { expiresIn: '15m' } // Short-lived token for 2FA
+      );
+      
+      logger.info('2FA required for login', { userId: user._id });
+      
+      return { 
+        requireTwoFactor: true,
+        twoFactorToken,
+        user: { id: user._id, email: user.email }
+      };
+    }
+
     // Generate access token
-    const accessToken = this.generateAccessToken(user);
+    const accessToken = this.generateToken(user);
     
     // Generate refresh token
     const refreshToken = await this.generateRefreshToken(user, deviceInfo);
@@ -105,10 +123,10 @@ class AuthService {
     logger.info('User logged in successfully', { userId: user._id });
 
     return { 
-      accessToken, 
+      token: accessToken, 
       refreshToken: refreshToken.token,
       refreshTokenExpiry: refreshToken.expiresAt,
-      user: { id: user._id, email: user.email, role: user.role } 
+      user: { id: user._id, email: user.email, name: user.name, role: user.role } 
     };
   }
 
@@ -166,7 +184,7 @@ class AuthService {
       }
 
       // Generate a new access token
-      const accessToken = this.generateAccessToken(user);
+      const accessToken = this.generateToken(user);
 
       // Optionally, you can rotate the refresh token for enhanced security
       // await RefreshToken.findByIdAndDelete(foundToken._id);
