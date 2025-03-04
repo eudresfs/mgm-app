@@ -5,14 +5,22 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "dev": "docker-compose up -d && nodemon src/index.js",
     "test": "jest --config=jest.config.js",
     "test:report": "jest --config=jest.config.js && node generate-test-report.js",
     "test:coverage": "COLLECT_COVERAGE=true jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "docker:build": "docker-compose build",
+    "docker:prune": "docker system prune -f",
+    "docker:clean": "docker-compose down -v",
+    "docker:status": "docker ps"
   },
   "jest": {
     "setupFilesAfterEnv": [
