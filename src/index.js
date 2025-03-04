@@ -75,14 +75,28 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-// Start the server
-app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
-  
-  // Initialize Kafka for event processing
-  setupKafka().catch(err => {
-    logger.error('Failed to setup Kafka:', err);
-  });
-});
+// Start the server with port retry mechanism
+const startServer = (port) => {
+  const server = app.listen(port)
+    .on('listening', () => {
+      logger.info(`Server running on port ${port}`);
+      
+      // Initialize Kafka for event processing
+      setupKafka().catch(err => {
+        logger.error('Failed to setup Kafka:', err);
+      });
+    })
+    .on('error', (err) => {
+      if (err.code === 'EADDRINUSE') {
+        logger.warn(`Port ${port} is in use, trying ${port + 1}`);
+        server.close();
+        startServer(port + 1);
+      } else {
+        logger.error('Server error:', err);
+      }
+    });
+};
+
+startServer(PORT);
 
 module.exports = app; // For testing purposes

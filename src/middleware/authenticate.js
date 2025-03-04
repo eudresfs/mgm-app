@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+const RefreshToken = require('../models/refreshToken');
+const logger = require('../utils/logger');
 
 const authenticate = async (req, res, next) => {
   try {
@@ -9,16 +11,29 @@ const authenticate = async (req, res, next) => {
     }
 
     const token = authHeader.replace('Bearer ', '');
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'test-secret-key');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    // Check token expiration
+    if (decoded.exp < Date.now() / 1000) {
+      return res.status(401).json({ error: 'Token expired' });
+    }
 
     const user = await User.findOne({ _id: decoded.userId }).select('-password');
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
 
+    // Check if user is active and email is verified
+    if (!user.isEmailVerified) {
+      return res.status(401).json({ error: 'Email not verified' });
+    }
+
     // Add user and role information to request object
     req.user = user;
     req.userRole = user.role;
+
+    // Log authentication success
+    logger.info('User authenticated successfully', { userId: user._id, role: user.role });
 
     next();
   } catch (error) {

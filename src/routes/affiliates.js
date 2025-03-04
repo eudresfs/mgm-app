@@ -8,11 +8,12 @@ const router = express.Router();
 const affiliateService = require('../services/affiliate');
 const trackingService = require('../services/tracking');
 const affiliateRewardsService = require('../services/affiliateRewards');
-const authenticate = require('../middleware/authenticate');
+const { authenticate, authorize } = require('../middleware/authenticate');
 const { validateRequest } = require('../middleware/validation');
+const Affiliate = require('../models/affiliate');
 
 // GET /api/affiliates - List all affiliates (admin only)
-router.get('/', authenticate(['admin']), async (req, res, next) => {
+router.get('/', authenticate, authorize(['admin']), async (req, res, next) => {
   try {
     const affiliates = await Affiliate.find({});
     res.status(200).json(affiliates);
@@ -22,7 +23,7 @@ router.get('/', authenticate(['admin']), async (req, res, next) => {
 });
 
 // GET /api/affiliates/:id - Get affiliate profile
-router.get('/:id', authenticate(), async (req, res, next) => {
+router.get('/:id', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own profile or is admin
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -52,7 +53,7 @@ router.post('/', validateRequest('affiliate'), async (req, res, next) => {
 });
 
 // PUT /api/affiliates/:id - Update affiliate profile
-router.put('/:id', authenticate(), validateRequest('affiliate'), async (req, res, next) => {
+router.put('/:id', authenticate, validateRequest('affiliate'), async (req, res, next) => {
   try {
     // Check if user is updating their own profile or is admin
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -76,7 +77,7 @@ router.put('/:id', authenticate(), validateRequest('affiliate'), async (req, res
 });
 
 // GET /api/affiliates/:id/discover-campaigns - Discover relevant campaigns
-router.get('/:id/discover-campaigns', authenticate(), async (req, res, next) => {
+router.get('/:id/discover-campaigns', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own data
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -95,7 +96,7 @@ router.get('/:id/discover-campaigns', authenticate(), async (req, res, next) => 
 });
 
 // GET /api/affiliates/:id/metrics - Get real-time metrics
-router.get('/:id/metrics', authenticate(), async (req, res, next) => {
+router.get('/:id/metrics', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own data
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -110,7 +111,7 @@ router.get('/:id/metrics', authenticate(), async (req, res, next) => {
 });
 
 // POST /api/affiliates/:id/generate-link - Generate tracking link
-router.post('/:id/generate-link', authenticate(), async (req, res, next) => {
+router.post('/:id/generate-link', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own data
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -136,7 +137,7 @@ router.post('/:id/generate-link', authenticate(), async (req, res, next) => {
 });
 
 // POST /api/affiliates/:id/promotional-materials - Generate promotional materials
-router.post('/:id/promotional-materials', authenticate(), async (req, res, next) => {
+router.post('/:id/promotional-materials', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own data
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -162,7 +163,7 @@ router.post('/:id/promotional-materials', authenticate(), async (req, res, next)
 });
 
 // GET /api/affiliates/:id/performance - Get performance reports
-router.get('/:id/performance', authenticate(), async (req, res, next) => {
+router.get('/:id/performance', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own data
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -181,7 +182,7 @@ router.get('/:id/performance', authenticate(), async (req, res, next) => {
 });
 
 // GET /api/affiliates/:id/goals - Get affiliate's goals and progress
-router.get('/:id/goals', authenticate(), async (req, res, next) => {
+router.get('/:id/goals', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own data
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -196,7 +197,7 @@ router.get('/:id/goals', authenticate(), async (req, res, next) => {
 });
 
 // GET /api/affiliates/:id/rewards - Get affiliate's available rewards
-router.get('/:id/rewards', authenticate(), async (req, res, next) => {
+router.get('/:id/rewards', authenticate, async (req, res, next) => {
   try {
     // Check if user is requesting their own data
     if (req.user.id !== req.params.id && req.user.role !== 'admin') {
